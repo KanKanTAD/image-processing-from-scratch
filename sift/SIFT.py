@@ -531,10 +531,12 @@ def drawLines(X1, X2, Y1, Y2, dis, img, num=10):
 
 if __name__ == '__main__':
     origimg = plt.imread('./SIFTimg/3.jpeg')
+
     if len(origimg.shape) == 3:
         img = origimg.mean(axis=-1)
     else:
         img = origimg
+
     keyPoints, discriptors = SIFT(img)
 
     origimg2 = plt.imread('./SIFTimg/4.jpeg')
